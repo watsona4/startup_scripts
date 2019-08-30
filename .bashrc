@@ -17,7 +17,6 @@ GIT_PS1_SHOWCOLORHINTS=true
 
 . ~/.git-prompt.sh
 
-retcode="$?"
 red='\[\e[31m\]'
 blue='\[\e[34m\]'
 green='\[\e[32m\]'
@@ -43,7 +42,7 @@ function prompt_after {
         prompt="${prompt} ${blue}(${name})"
     fi
 
-    if [[ ${retcode} == 0 ]]; then
+    if [[ $? == 0 ]]; then
 	prompt="${prompt} ${green}:)${off}"
     else
 	prompt="${prompt} ${red}:(${off}"
@@ -51,11 +50,11 @@ function prompt_after {
 
     prompt="${prompt}${off} ${bold}]\n"
 
-    if [ -n "${LSB_JOBID}"]; then
+    if [ -n "${LSB_JOBID}" ]; then
         prompt="${prompt}${boldpurple}{${LSB_JOBID}}${off} ${bold}"
     fi
 
-    prompt="[\!] >${off} "
+    prompt="${prompt}[\!] >${off} "
 
     printf "${prompt}"
 }
