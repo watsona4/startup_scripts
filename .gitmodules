@@ -1,0 +1,6 @@
+[submodule ".emacs.d/nerd-icons.el"]
+	path = .emacs.d/nerd-icons.el
+	url = git@github.com:rainstormstudio/nerd-icons.el.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
