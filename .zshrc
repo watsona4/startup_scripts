@@ -103,6 +103,7 @@ export ARCHFLAGS="-arch x86_64"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="/usr/bin/batcat"
+alias nw="/usr/bin/emacs -nw"
 
 export TERM=xterm-256color
 
