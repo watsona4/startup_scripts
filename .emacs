@@ -24,6 +24,11 @@
   :hook (python-mode . python-black-on-save-mode-enable)
   )
 
+(setopt use-short-answers t)
+
+(keymap-global-set "C-c c" 'comment-region)
+(keymap-global-set "C-c u" 'uncomment-region)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

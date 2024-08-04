@@ -108,5 +108,6 @@ alias ls="/usr/bin/ls -lh --color=auto"
 alias grep="/usr/bin/grep --color=auto"
 
 export TERM=xterm-256color
+export XAUTHORITY=/home/watsam/.Xauthority
 
 eval "$(starship init zsh)"
