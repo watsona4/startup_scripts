@@ -105,6 +105,7 @@ export ARCHFLAGS="-arch x86_64"
 alias cat="/usr/bin/batcat"
 alias nw="/usr/bin/emacs -nw"
 alias ls="/usr/bin/ls -lh --color=auto"
+alias grep="/usr/bin/grep --color=auto"
 
 export TERM=xterm-256color
 
