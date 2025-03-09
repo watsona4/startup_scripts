@@ -1,3 +1,15 @@
 [submodule ".emacs.d/nerd-icons.el"]
 	path = .emacs.d/nerd-icons.el
 	url = git@github.com:rainstormstudio/nerd-icons.el.git
+[submodule "oh-my-zsh/plugins/fast-syntax-highlighting"]
+	path = oh-my-zsh/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+[submodule "oh-my-zsh/plugins/zsh-autocomplete"]
+	path = oh-my-zsh/plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
+[submodule "oh-my-zsh/plugins/zsh-autosuggestions"]
+	path = oh-my-zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "oh-my-zsh/plugins/zsh-syntax-highlighting"]
+	path = oh-my-zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
