@@ -1,0 +1,439 @@
+format = """
+[  ](bg:color1)\
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+[](bg:color2 fg:color1)\
+$directory\
+[](bg:color3 fg:color2)\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+[](fg:color3)\
+$cmd_duration\
+$fill\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$fill\
+$memory_usage\
+$jobs\
+$time\
+$status\
+$battery\
+$line_break\
+$os\
+$container\
+$shell\
+[ ╰─](bg:#000000)\
+$character"""
+
+palette = 'theme2'
+
+[palettes.theme1]
+#rosewater = "#f5e0dc"
+#flamingo = "#f2cdcd"
+#pink = "#f5c2e7"
+#orange = "#cba6f7"
+#red = "#f38ba8"
+#maroon = "#eba0ac"
+#peach = "#fab387"
+#yellow = "#f9e2af"
+#green = "color2"
+#teal = "#94e2d5"
+#sky = "#89dceb"
+#sapphire = "#74c7ec"
+#blue = "#89b4fa"
+#lavender = "#b4befe"
+#text = "#cdd6f4"
+#subtext1 = "#bac2de"
+#subtext0 = "#a6adc8"
+#overlay2 = "#9399b2"
+#overlay1 = "#7f849c"
+#overlay0 = "#6c7086"
+#surface2 = "#585b70"
+#surface1 = "#45475a"
+#surface0 = "#313244"
+#base = "#1e1e2e"
+#mantle = "#181825"
+#crust = "#11111b"
+color1 = "#272343"
+color2 = "#8fce00"
+color3 = "#E8F9FF"
+color4 = "#303030"
+color5 = "#b5179e"
+color6 = "#edf2f4"
+color7 = "#CF9562"
+color8 = "#3a0ca3"
+
+[palettes.theme2]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
+color1 = "#272343"
+color2 = "#667292"
+color3 = "#c0caf5"
+color4 = "#303030"
+color5 = "#d9ecd0"
+color6 = "#000000"
+color7 = "#667292"
+color8 = "#FF4500"
+
+
+
+[character]
+success_symbol = "[ ➤]($bold fg:#f8f8f2)"
+error_symbol = "[ ➤]($bold fg:#fb4934)"
+# Replace the "❯" symbol in the prompt with "➜"
+#[character]      # The name of the module we are configuring is "character"
+#symbol = "🚀"     # The "symbol" segment is being set to "➜"
+
+[fill]
+symbol = "─"
+
+
+[cmd_duration]
+min_time = 2_000
+style = "fg:#ffffff"
+format = "[took ⏱ $duration ]($style)"
+
+[time]
+use_12hr = true
+style = "bg:color5 fg:color6"
+format = '[](bg:#000000 fg:color5)[$time ]($style)'
+disabled = false
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = '󰂄 '
+discharging_symbol = '󰂃 '
+format = '[](bg:color5 fg:color8)[$symbol$percentage]($style) '
+
+[[battery.display]]
+threshold = 90
+style = "bg:color8 fg:color6"
+
+#[cmd_duration]
+#min_time = 1000
+#style = 'fg:gray'
+#format = '\[[⏱ $duration]($style)\]'
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+style = "fg:#000000 bg:color2"
+read_only_style="fg:#000000 bg:color2"
+format = '[ $path ]($style)[$read_only]($read_only_style)'
+truncation_length = 5
+#truncation_symbol = ":"
+truncation_symbol = "…/"
+
+truncate_to_repo = true
+home_symbol = '󰋜'
+use_os_path_sep = false
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+style = "bg:color3 fg:color4"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:color3 fg:color4"
+conflicted = '󰞇=\($count\)'
+#conflicted = '🏳'
+#ahead = '🏎💨'
+#ahead = "🏎️ 💨 ×${count} "
+#behind = "🐢 ×${count} "
+#behind = '😰'
+#diverged = '😵'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+up_to_date = '✓'
+#untracked = '🤷'
+untracked = '🤷 $count '
+stashed = '📦 $count '
+#modified = '📝'
+modified = ' $count '
+#staged = '[s=\($count\)](bg:color3 fg:color4)'
+staged = '++ $count '
+renamed = '👅'
+#deleted = '🗑'
+deleted = ' $count '
+format = '[$all_status$ahead_behind ]($style)'
+
+[git_commit]
+tag_symbol = '  '
+style = "bg: color7"
+commit_hash_length = 4
+
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+#[memory_usage]
+#symbol = "▪▫▪ "
+#format = " mem [${ram}( ${swap})]($style)"
+#[memory_usage]
+#format = "$symbol [${ram}( | ${swap})]($style) "
+#disabled = true
+#threshold = -1
+#symbol = ''
+# style = "bold dimmed green"
+disabled = false
+threshold = 0
+format = "[\\[$symbol$ram_pct $ram\\]]($style)"
+#style = "bold #d60532"
+style = "bold dimmed green"
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
