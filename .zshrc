@@ -74,7 +74,7 @@ export SAVEHIST=10000
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -102,8 +102,8 @@ export ARCHFLAGS="-arch x86_64"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+#alias zshconfig="mate ~/.zshrc"
+#alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="/usr/bin/batcat"
 #alias emacs="/usr/bin/emacs -nw"
 alias ls="/usr/bin/ls -lh --color=auto"
@@ -115,7 +115,6 @@ source ~/.secrets
 export TERM=xterm-256color
 export XAUTHORITY=/home/watsam/.Xauthority
 
-eval "$(starship init zsh)"
 lint () {
     for file in $*; do
 	echo "Linting $file"
