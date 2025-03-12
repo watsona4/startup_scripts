@@ -1,0 +1,5 @@
+lua-mode
+julia-mode
+magit
+time-stamp
+cython-mode
