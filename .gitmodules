@@ -17,3 +17,18 @@
 	path = emacs.d/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode.git
 	branch = v2.7
+[submodule "znap/zdharma-continuum/fast-syntax-highlighting"]
+	path = znap/zdharma-continuum/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+[submodule "znap/zsh-users/zsh-autosuggestions"]
+	path = znap/zsh-users/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "znap/zsh-snap"]
+	path = znap/zsh-snap
+	url = https://github.com/marlonrichert/zsh-snap.git
+[submodule "znap/zsh-users/zsh-syntax-highlighting"]
+	path = znap/zsh-users/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "znap/zsh-users/zsh-completions"]
+	path = znap/zsh-users/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
