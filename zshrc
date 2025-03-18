@@ -133,10 +133,10 @@ export XAUTHORITY=/home/watsam/.Xauthority
 
 lint () {
     for file in $*; do
-	echo "Linting $file"
-	black -l 79 --preview --unstable $file
-	isort $file
-	flake8 --ignore=E501 $file
+    	echo "Linting $file"
+    	isort $file
+    	flake8 --max-line-length=99 --max-complexity=10 --ignore=E501,W503 $file
+    	black --line-length=99 --preview --unstable $file
     done
 }
 
